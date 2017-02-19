@@ -9,7 +9,31 @@ class Stuff extends Component {
   constructor(props) {
 
     super(props);
+    this.showTest = this.showTest.bind(this);
+    this.state = {};
+    this.state.var1 = false;
+    this.state.test = null;
     
+  }
+
+  showTest() {
+
+    this.state.var1 = !this.state.var1;
+
+    if (!!this.state.var1) {
+
+      import('./Test.js').then((Test) => {
+
+        this.setState({test: <Test.default />});
+        
+      });
+
+    } else {
+
+      this.setState({test: null});
+
+    }
+
   }
 
   render() {
@@ -20,6 +44,8 @@ class Stuff extends Component {
         <button onClick={this.props.store.bind(this, 'food')}>Gather Food</button>
         <button onClick={this.props.store.bind(this, 'wood')}>Gather Wood</button>
         <button onClick={this.props.store.bind(this, 'stone')}>Gather Stone</button>
+        <button onClick={this.showTest}>Say Hi!</button>
+        {this.state.test}
       </div>
     );
 

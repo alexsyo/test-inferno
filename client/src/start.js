@@ -1,15 +1,11 @@
 import Inferno from 'inferno';
 import { Router, Route, IndexRoute } from 'inferno-router';
-import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'inferno-redux';
+import createBrowserHistory from 'history/createBrowserHistory';
+import * as route from './route.js';
 import store from './redux/store';
+import html from'./index.html';
 import App from './App';
-import Home from './components/Routes/Home/Home.js';
-import Stuff from './components/Routes/Stuff/Stuff.js';
-import Friends from './components/Routes/Friends/Friends.js';
-import About from './components/Routes/About/About.js';
-
-import './index.html';
 
 const browserHistory = createBrowserHistory();
 
@@ -18,10 +14,10 @@ Inferno.render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route component={App}>
-        <IndexRoute component={Home} />
-        <Route path="/stuff" component={Stuff} />
-        <Route path="/friends" component={Friends} />
-        <Route path="/about" component={About} />
+        <IndexRoute getComponent={route.load('Home')} />
+        <Route path="/stuff" getComponent={route.load('Stuff')} />
+        <Route path="/friends" getComponent={route.load('Friends')} />
+        <Route path="/about" getComponent={route.load('About')} />
       </Route>
     </Router>
   </Provider>,
