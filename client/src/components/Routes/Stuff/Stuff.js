@@ -2,7 +2,7 @@ import Inferno from 'inferno';
 import Component from 'inferno-component';
 import { connect } from 'inferno-redux';
 import { bindActionCreators } from 'redux';
-import * as resourcesAction from 'redux/actions/resourcesActions';
+import * as resourcesActions from 'redux/actions/resourcesActions';
 
 class Stuff extends Component {
 
@@ -56,7 +56,7 @@ class Stuff extends Component {
 const mapDispatchToProps = (dispatch) => {
 
   return bindActionCreators({
-    store: resourcesAction.store
+    store: resourcesActions.store
   }, dispatch);
 
 };

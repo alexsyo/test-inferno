@@ -1,7 +1,8 @@
 import Inferno from 'inferno';
 import Component from 'inferno-component';
 import NavBar from './components/NavBar.js';
-import ResourcesList from './components/ResourcesList.js';
+import Resources from './components/Resources.js';
+import Population from './components/Population.js';
 
 class App extends Component {
 
@@ -17,7 +18,8 @@ class App extends Component {
 
       <div>
         <NavBar />
-        <ResourcesList />
+        <Resources />
+        <Population />
         <h1>Inferno App</h1>
         {this.props.children}
       </div>

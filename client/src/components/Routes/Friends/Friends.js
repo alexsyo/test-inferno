@@ -2,7 +2,8 @@ import Inferno from 'inferno';
 import Component from 'inferno-component';
 import { connect } from 'inferno-redux';
 import { bindActionCreators } from 'redux';
-import * as resourcesAction from 'redux/actions/resourcesActions';
+import * as resourcesActions from 'redux/actions/resourcesActions';
+import * as populationActions from 'redux/actions/populationActions';
 
 class Friends extends Component {
 
@@ -17,7 +18,7 @@ class Friends extends Component {
     return (
       <div>
         <p>...are awsome!</p>
-        <button onClick={this.props.consume.bind(this, 'food')}>Consume Food</button>
+        <button onClick={this.props.feed}>Eat!!</button>
         <button onClick={this.props.consume.bind(this, 'wood')}>Consume Wood</button>
         <button onClick={this.props.consume.bind(this, 'stone')}>Consume Stone</button>
       </div>
@@ -30,7 +31,8 @@ class Friends extends Component {
 const mapDispatchToProps = (dispatch) => {
 
   return bindActionCreators({
-    consume: resourcesAction.consume
+    feed: populationActions.feed,
+    consume: resourcesActions.consume
   }, dispatch);
 
 };

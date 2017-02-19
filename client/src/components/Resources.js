@@ -2,7 +2,7 @@ import Inferno from 'inferno';
 import Component from 'inferno-component';
 import { connect } from 'inferno-redux';
 
-class ResourcesList extends Component {
+class Resources extends Component {
 
     constructor(props) {
 
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
 
 } 
 
-export default connect(mapStateToProps, null)(ResourcesList);
+export default connect(mapStateToProps, null)(Resources);
