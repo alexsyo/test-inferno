@@ -4,7 +4,8 @@ import { Provider } from 'inferno-redux';
 import createBrowserHistory from 'history/createBrowserHistory';
 import * as route from './route.js';
 import store from './redux/store';
-import html from'./index.html';
+import html from './index.html';
+import css from './css/main.scss';
 import App from './App';
 
 const browserHistory = createBrowserHistory();
