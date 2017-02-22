@@ -19,6 +19,7 @@ Inferno.render(
         <Route path="/stuff" getComponent={route.load('Stuff')} />
         <Route path="/friends" getComponent={route.load('Friends')} />
         <Route path="/about" getComponent={route.load('About')} />
+        <Route path="*" getComponent={route.load('Home')} />
       </Route>
     </Router>
   </Provider>,
