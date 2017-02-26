@@ -3,7 +3,7 @@ const debug = process.env.NODE_ENV != "production";
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: debug ? 'source-map' : null,
+  devtool: debug ? 'source-map' : false,
   entry: './client/src/start.js',
   output: {
     filename: 'bundle.js',
@@ -21,6 +21,7 @@ module.exports = {
         test: /\.scss/,
         use: ExtractTextPlugin.extract([
           "css-loader",
+          "postcss-loader",
           "sass-loader"
         ])
       },
