@@ -44,6 +44,10 @@ module.exports = {
     modules: [
       path.resolve(__dirname, './client/src'),
       "node_modules"
-    ]
+    ],
+    alias: {
+      'react': 'inferno-compat',
+      'react-dom': 'inferno-compat'
+    }
   }
 };

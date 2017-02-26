@@ -39,7 +39,7 @@ class Stuff extends Component {
   render() {
 
     return (
-      <div>
+      <div className="route">
         <p>Godd stuff...</p>
         <button onClick={this.props.store.bind(this, 'food')}>Gather Food</button>
         <button onClick={this.props.store.bind(this, 'wood')}>Gather Wood</button>

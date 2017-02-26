@@ -14,7 +14,7 @@ const browserHistory = createBrowserHistory();
 Inferno.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route component={App}>
+      <Route path="/" component={App}>
         <IndexRoute getComponent={route.load('Home')} />
         <Route path="/stuff" getComponent={route.load('Stuff')} />
         <Route path="/friends" getComponent={route.load('Friends')} />

@@ -16,7 +16,7 @@ class Friends extends Component {
   render() {
 
     return (
-      <div>
+      <div className="route">
         <p>...are awsome!</p>
         <button onClick={this.props.feed}>Eat!!</button>
         <button onClick={this.props.consume.bind(this, 'wood')}>Consume Wood</button>
