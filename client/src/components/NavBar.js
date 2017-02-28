@@ -24,6 +24,9 @@ class NavBar extends Component {
                     <Link to="/friends">Friends</Link>
                 </li>
                 <li>
+                    <Link to="/form">Form</Link>
+                </li>
+                <li>
                     <Link to="/about">About</Link>
                 </li>
             </ul>
